@@ -29,12 +29,13 @@ void Game() {
         }
     }
     else if (input == "2") {
-        if (hero.name == null) {
-            Game();
+        if (hero.name != null && hero.description != null && hero.ability != null) {
+            Console.WriteLine("Character Stats:");
+            Console.WriteLine($"Name: {hero.name}\nDescription: {hero.description}\nAbility: {hero.ability}");
+            Console.ReadLine();
         }
         else {
-            Console.WriteLine(hero.description);
-            Console.ReadLine();
+            Game();
         }
     }
 
